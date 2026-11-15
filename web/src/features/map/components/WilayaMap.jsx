@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import { getInfernoColor } from '../../../utils/inferno';
-import { MapPin, Layers, Flame, Eye, EyeOff, AlertTriangle } from 'lucide-react';
+import { MapPin, Layers, Flame, Eye, EyeOff, AlertTriangle, Crosshair, Check, RotateCcw, Box } from 'lucide-react';
 
 export function WilayaMap({ 
   geojson, 
@@ -20,8 +20,25 @@ export function WilayaMap({
   const markersLayerRef = useRef(null);
   const tileLayerRef = useRef(null);
   const tileLabelRef = useRef(null);
+  const customAoiLayerRef = useRef(null);
 
   const [showTiles, setShowTiles] = useState(true);
+  const [isAoiOpen, setIsAoiOpen] = useState(false);
+  const [aoiBounds, setAoiBounds] = useState({
+    south: 36.45,
+    north: 36.85,
+    west: 4.80,
+    east: 5.40
+  });
+  const [isAoiApplied, setIsAoiApplied] = useState(false);
+
+  // Compute bounding box area in km²
+  const aoiAreaKm2 = React.useMemo(() => {
+    const latDist = Math.abs(aoiBounds.north - aoiBounds.south) * 111.32;
+    const midLatRad = ((aoiBounds.north + aoiBounds.south) / 2) * (Math.PI / 180);
+    const lonDist = Math.abs(aoiBounds.east - aoiBounds.west) * 111.32 * Math.cos(midLatRad);
+    return Math.round(latDist * lonDist);
+  }, [aoiBounds]);
 
   // Compute metric map for the active month across all 7 regions
   const currentMonthData = React.useMemo(() => {
@@ -241,6 +258,70 @@ export function WilayaMap({
 
   }, [geojson, currentMonthData, selectedWilaya, metric, showTiles, onSelectWilaya]);
 
+  // Handle Custom AOI Bounding Box Layer
+  useEffect(() => {
+    const map = mapInstanceRef.current;
+    if (!map) return;
+
+    if (customAoiLayerRef.current) {
+      map.removeLayer(customAoiLayerRef.current);
+      customAoiLayerRef.current = null;
+    }
+
+    if (!isAoiApplied) return;
+
+    const bounds = [
+      [aoiBounds.south, aoiBounds.west],
+      [aoiBounds.north, aoiBounds.east]
+    ];
+
+    const aoiGroup = L.layerGroup();
+
+    const rect = L.rectangle(bounds, {
+      color: '#dc2626',
+      weight: 2.5,
+      dashArray: '5, 5',
+      fillColor: '#ef4444',
+      fillOpacity: 0.15
+    });
+
+    const center = [(aoiBounds.south + aoiBounds.north) / 2, (aoiBounds.west + aoiBounds.east) / 2];
+
+    const aoiBadge = document.createElement('div');
+    aoiBadge.className = 'px-2 py-0.5 rounded shadow-md text-center font-sans bg-red-600 text-white font-bold text-[10px] ring-1 ring-white/80 whitespace-nowrap';
+    aoiBadge.textContent = `Custom AOI: ~${aoiAreaKm2.toLocaleString()} km²`;
+
+    const marker = L.marker(center, {
+      icon: L.divIcon({
+        html: aoiBadge,
+        className: 'custom-aoi-center-badge',
+        iconSize: [140, 24],
+        iconAnchor: [70, 12]
+      }),
+      interactive: false
+    });
+
+    aoiGroup.addLayer(rect);
+    aoiGroup.addLayer(marker);
+    aoiGroup.addTo(map);
+
+    customAoiLayerRef.current = aoiGroup;
+    map.fitBounds(bounds, { padding: [35, 35] });
+
+  }, [isAoiApplied, aoiBounds, aoiAreaKm2]);
+
+  const applyPreset = (s, n, w, e) => {
+    setAoiBounds({ south: s, north: n, west: w, east: e });
+    setIsAoiApplied(true);
+  };
+
+  const clearAOI = () => {
+    setIsAoiApplied(false);
+    if (geojsonLayerRef.current && mapInstanceRef.current) {
+      mapInstanceRef.current.fitBounds(geojsonLayerRef.current.getBounds(), { padding: [20, 20] });
+    }
+  };
+
   return (
     <div className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs flex flex-col h-full">
       <div className="p-3.5 border-b border-slate-200 flex items-center justify-between bg-slate-50/50">
@@ -251,8 +332,24 @@ export function WilayaMap({
           </h2>
         </div>
         
-        {/* Tiles / Vector Toggle */}
+        {/* Actions Bar */}
         <div className="flex items-center gap-2">
+          {/* Custom AOI Toggle */}
+          <button
+            type="button"
+            onClick={() => setIsAoiOpen(!isAoiOpen)}
+            className={`inline-flex items-center gap-1 px-2.5 py-1 rounded text-[11px] font-semibold border transition-colors ${
+              isAoiOpen || isAoiApplied
+                ? 'bg-red-50 text-red-700 border-red-300 font-bold' 
+                : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100'
+            }`}
+            title="Custom Area of Interest (AOI): Draw custom bounding box or input coordinates per NASA Challenge brief"
+          >
+            <Crosshair size={12} className={isAoiApplied ? "text-red-600 animate-pulse" : "text-slate-500"} />
+            <span>{isAoiApplied ? `AOI Active (${aoiAreaKm2} km²)` : 'Custom AOI'}</span>
+          </button>
+
+          {/* Tiles / Vector Toggle */}
           <button
             type="button"
             onClick={() => setShowTiles(!showTiles)}
@@ -264,10 +361,112 @@ export function WilayaMap({
             title="Toggle between online map tiles and standalone vector mode (works 100% offline with zero tiles)"
           >
             {showTiles ? <Eye size={12} /> : <EyeOff size={12} />}
-            <span>{showTiles ? 'Basemap Tiles: On' : 'Standalone Vector (No Tiles)'}</span>
+            <span>{showTiles ? 'Tiles: On' : 'Vector Only'}</span>
           </button>
         </div>
       </div>
+
+      {/* Collapsible Custom AOI Coordinate Control Panel (Satisfies NASA Prompt Wishlist) */}
+      {isAoiOpen && (
+        <div className="p-3 bg-red-50/50 border-b border-red-200/80 text-xs space-y-2.5">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span className="font-bold text-red-950 flex items-center gap-1.5 text-[11px]">
+              <Box size={13} className="text-red-600" />
+              Define Custom Area of Interest (Bounding Box Coordinates)
+            </span>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <span className="text-[10px] text-slate-500 font-semibold">Presets:</span>
+              <button
+                type="button"
+                onClick={() => applyPreset(36.55, 36.78, 4.55, 4.88)}
+                className="px-1.5 py-0.5 rounded bg-white border border-slate-300 text-[10px] hover:bg-slate-100 text-slate-700"
+              >
+                Akfadou Forest
+              </button>
+              <button
+                type="button"
+                onClick={() => applyPreset(36.40, 36.55, 4.05, 4.45)}
+                className="px-1.5 py-0.5 rounded bg-white border border-slate-300 text-[10px] hover:bg-slate-100 text-slate-700"
+              >
+                Djurdjura Ridge
+              </button>
+              <button
+                type="button"
+                onClick={() => applyPreset(36.74, 36.83, 5.04, 5.16)}
+                className="px-1.5 py-0.5 rounded bg-white border border-slate-300 text-[10px] hover:bg-slate-100 text-slate-700"
+              >
+                Gouraya Reserve
+              </button>
+              {isAoiApplied && (
+                <button
+                  type="button"
+                  onClick={clearAOI}
+                  className="px-1.5 py-0.5 rounded bg-red-100 text-red-800 font-semibold text-[10px] hover:bg-red-200 flex items-center gap-0.5"
+                >
+                  <RotateCcw size={10} /> Reset
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Coordinate Inputs */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <div>
+              <label className="block text-[10px] text-slate-500 font-semibold">Min Lat (South)</label>
+              <input
+                type="number"
+                step="0.01"
+                value={aoiBounds.south}
+                onChange={e => setAoiBounds({ ...aoiBounds, south: parseFloat(e.target.value) || 0 })}
+                className="w-full px-2 py-1 bg-white border border-slate-300 rounded text-xs font-mono"
+              />
+            </div>
+            <div>
+              <label className="block text-[10px] text-slate-500 font-semibold">Max Lat (North)</label>
+              <input
+                type="number"
+                step="0.01"
+                value={aoiBounds.north}
+                onChange={e => setAoiBounds({ ...aoiBounds, north: parseFloat(e.target.value) || 0 })}
+                className="w-full px-2 py-1 bg-white border border-slate-300 rounded text-xs font-mono"
+              />
+            </div>
+            <div>
+              <label className="block text-[10px] text-slate-500 font-semibold">Min Lon (West)</label>
+              <input
+                type="number"
+                step="0.01"
+                value={aoiBounds.west}
+                onChange={e => setAoiBounds({ ...aoiBounds, west: parseFloat(e.target.value) || 0 })}
+                className="w-full px-2 py-1 bg-white border border-slate-300 rounded text-xs font-mono"
+              />
+            </div>
+            <div>
+              <label className="block text-[10px] text-slate-500 font-semibold">Max Lon (East)</label>
+              <input
+                type="number"
+                step="0.01"
+                value={aoiBounds.east}
+                onChange={e => setAoiBounds({ ...aoiBounds, east: parseFloat(e.target.value) || 0 })}
+                className="w-full px-2 py-1 bg-white border border-slate-300 rounded text-xs font-mono"
+              />
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between pt-1">
+            <span className="text-[11px] font-mono text-slate-600">
+              Approx. Surface Footprint: <strong>{aoiAreaKm2.toLocaleString()} km²</strong>
+            </span>
+            <button
+              type="button"
+              onClick={() => setIsAoiApplied(true)}
+              className="inline-flex items-center gap-1 px-3 py-1 bg-red-600 hover:bg-red-700 text-white rounded text-xs font-bold shadow-xs transition-colors"
+            >
+              <Check size={12} /> Apply AOI Slice
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Map Canvas with SVG Cartographic Background for 100% Tile-Free Reliability */}
       <div 

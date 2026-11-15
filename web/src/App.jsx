@@ -3,7 +3,7 @@ import firmsyncData from './data/firmsync_data.json';
 import { TRANSLATIONS } from './utils/i18n';
 import { Header, MethodologyModal, ExportModal, LogoMark } from './components/common';
 import { StatusIndicator } from './features/status';
-import { ForecastCard } from './features/forecast';
+import { ForecastCard, IncidentDrilldown } from './features/forecast';
 import { WilayaMap } from './features/map';
 import { CalendarHeatmap } from './features/calendar';
 import { ShieldAlert, ExternalLink, Satellite } from 'lucide-react';
@@ -174,6 +174,9 @@ export default function App() {
           </div>
         </div>
 
+        {/* Tactical Wildfire Incident Drilldown (Daily Cumulative FRE) */}
+        <IncidentDrilldown t={t} />
+
         {/* 25-Year Calendar Heatmap Section */}
         <CalendarHeatmap
           timeseries={firmsyncData.timeseries}
@@ -251,6 +254,7 @@ export default function App() {
         timeseries={firmsyncData.timeseries}
         selectedWilaya={selectedWilaya}
         regions={firmsyncData.regions}
+        geojson={firmsyncData.geojson}
         t={t}
       />
 
