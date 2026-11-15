@@ -214,7 +214,7 @@ export function IncidentDrilldown({ t }) {
         <Info size={14} className="text-amber-700 shrink-0 mt-0.5" />
         <div className="space-y-0.5">
           <p>
-            <strong>Physics of FRE Integration:</strong> Daily Fire Radiative Energy ($\text{FRE}$) represents the time-integral of thermal power ($\text{FRE} = \int \text{FRP}(t) dt$), numerically calculated via the trapezoidal rule. 
+            <strong>Physics of FRE Integration:</strong> Daily Fire Radiative Energy (FRE) represents the time-integral of thermal power (FRE = &int; FRP(t) dt), numerically calculated via the trapezoidal rule. 
             The cumulative curve exhibits a characteristic sigmoid ramp during uncontrolled spread phases (Day 2–4 in August 2021), directly correlating to fuel consumption and severe smoke emission.
           </p>
         </div>
