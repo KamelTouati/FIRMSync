@@ -15,13 +15,18 @@ from firmsync import config as cfg
 FILES = [
     (cfg.DATA_PROCESSED / "monthly_harmonized.csv", "monthly_harmonized.csv"),
     (cfg.DATA_PROCESSED / "monthly_regional.csv", "monthly_regional.csv"),
-    (cfg.OUTPUTS / "ratios.json", "ratios.json"),
-    (cfg.OUTPUTS / "validation.json", "validation.json"),
     (cfg.OUTPUTS / "validation_summary.csv", "validation_summary.csv"),
-    (cfg.OUTPUTS / "run_metadata.json", "run_metadata.json"),
+    (cfg.OUTPUTS / "ratios.json", "metadata/ratios.json"),
+    (cfg.OUTPUTS / "validation.json", "metadata/validation.json"),
+    (cfg.OUTPUTS / "run_metadata.json", "metadata/run_metadata.json"),
 ]
 
 CARD = """---
+configs:
+- config_name: default
+  data_files:
+  - split: train
+    path: monthly_harmonized.csv
 license: {license}
 pretty_name: FIRMSync - harmonized MODIS/VIIRS monthly fire activity, northern Algeria
 language:
@@ -108,6 +113,22 @@ def publish_to_huggingface(repo_id: str, is_public: bool = False,
 
     api = HfApi(token=token)
     api.create_repo(repo_id, repo_type="dataset", private=not is_public, exist_ok=True)
+
+    # Enforce public/private visibility setting on existing repository
+    try:
+        api.update_repo_settings(repo_id=repo_id, private=not is_public, repo_type="dataset")
+        print(f"Repository visibility set to: {'public' if is_public else 'private'}")
+    except Exception as e:
+        print(f"Notice updating visibility: {e}")
+
+    # Remove obsolete root-level JSON files that confuse the Hugging Face Dataset Viewer
+    for legacy_name in ["validation.json", "ratios.json", "run_metadata.json"]:
+        try:
+            api.delete_file(path_in_repo=legacy_name, repo_id=repo_id, repo_type="dataset")
+            print(f"Purged legacy root file from HF: {legacy_name}")
+        except Exception:
+            pass
+
     for src, name in FILES:
         if src.exists():
             api.upload_file(path_or_fileobj=str(src), path_in_repo=name, repo_id=repo_id, repo_type="dataset")
