@@ -1,0 +1,918 @@
+{
+  "metadata": {
+    "model_type": "Hierarchical Climatology-Anchored Autoregressive Model (HACM)",
+    "training_period": "2000-2026",
+    "validation_method": "Leave-One-Year-Out Cross-Validation (LOOCV)",
+    "reference_sources": [
+      "Wooster et al. (2005) - Fire Radiative Energy biomass combustion physics",
+      "EFFIS / JRC (2021, 2023) - Mediterranean Algeria wildfire damage calibrations"
+    ]
+  },
+  "validation_metrics": {
+    "algiers": {
+      "region_name": "Algiers",
+      "loocv_mae": 7.15,
+      "weights": {
+        "lag1": 0.16,
+        "lag2": 0.035,
+        "lag12": 0.0,
+        "climatology_anchor": 0.805
+      }
+    },
+    "bejaia": {
+      "region_name": "B\u00e9ja\u00efa",
+      "loocv_mae": 63.49,
+      "weights": {
+        "lag1": 0.033,
+        "lag2": 0.0,
+        "lag12": 0.0,
+        "climatology_anchor": 0.967
+      }
+    },
+    "bouira": {
+      "region_name": "Bouira",
+      "loocv_mae": 24.25,
+      "weights": {
+        "lag1": 0.073,
+        "lag2": 0.0,
+        "lag12": 0.157,
+        "climatology_anchor": 0.77
+      }
+    },
+    "boumerdes": {
+      "region_name": "Boumerd\u00e8s",
+      "loocv_mae": 17.6,
+      "weights": {
+        "lag1": 0.201,
+        "lag2": 0.0,
+        "lag12": 0.01,
+        "climatology_anchor": 0.789
+      }
+    },
+    "jijel": {
+      "region_name": "Jijel",
+      "loocv_mae": 74.75,
+      "weights": {
+        "lag1": 0.006,
+        "lag2": 0.0,
+        "lag12": 0.0,
+        "climatology_anchor": 0.994
+      }
+    },
+    "skikda": {
+      "region_name": "Skikda",
+      "loocv_mae": 50.8,
+      "weights": {
+        "lag1": 0.063,
+        "lag2": 0.0,
+        "lag12": 0.015,
+        "climatology_anchor": 0.922
+      }
+    },
+    "tizi_ouzou": {
+      "region_name": "Tizi Ouzou",
+      "loocv_mae": 57.79,
+      "weights": {
+        "lag1": 0.008,
+        "lag2": 0.0,
+        "lag12": 0.0,
+        "climatology_anchor": 0.992
+      }
+    }
+  },
+  "forecasts": {
+    "algiers": [
+      {
+        "year": 2026,
+        "month": 12,
+        "predicted_count": 2.2,
+        "baseline_median": 1.0,
+        "risk_class": "high",
+        "ha_min": 14,
+        "ha_max": 33
+      },
+      {
+        "year": 2027,
+        "month": 1,
+        "predicted_count": 1.4,
+        "baseline_median": 1.0,
+        "risk_class": "normal",
+        "ha_min": 9,
+        "ha_max": 21
+      },
+      {
+        "year": 2027,
+        "month": 2,
+        "predicted_count": 1.1,
+        "baseline_median": 1.0,
+        "risk_class": "normal",
+        "ha_min": 7,
+        "ha_max": 16
+      },
+      {
+        "year": 2027,
+        "month": 3,
+        "predicted_count": 1.0,
+        "baseline_median": 1.0,
+        "risk_class": "normal",
+        "ha_min": 6,
+        "ha_max": 15
+      },
+      {
+        "year": 2027,
+        "month": 4,
+        "predicted_count": 2.6,
+        "baseline_median": 3.0,
+        "risk_class": "normal",
+        "ha_min": 16,
+        "ha_max": 38
+      },
+      {
+        "year": 2027,
+        "month": 5,
+        "predicted_count": 2.1,
+        "baseline_median": 2.0,
+        "risk_class": "normal",
+        "ha_min": 13,
+        "ha_max": 31
+      },
+      {
+        "year": 2027,
+        "month": 6,
+        "predicted_count": 6.9,
+        "baseline_median": 8.0,
+        "risk_class": "normal",
+        "ha_min": 43,
+        "ha_max": 102
+      },
+      {
+        "year": 2027,
+        "month": 7,
+        "predicted_count": 8.4,
+        "baseline_median": 9.0,
+        "risk_class": "normal",
+        "ha_min": 52,
+        "ha_max": 124
+      },
+      {
+        "year": 2027,
+        "month": 8,
+        "predicted_count": 13.7,
+        "baseline_median": 15.0,
+        "risk_class": "normal",
+        "ha_min": 85,
+        "ha_max": 203
+      },
+      {
+        "year": 2027,
+        "month": 9,
+        "predicted_count": 9.7,
+        "baseline_median": 9.0,
+        "risk_class": "normal",
+        "ha_min": 60,
+        "ha_max": 144
+      },
+      {
+        "year": 2027,
+        "month": 10,
+        "predicted_count": 7.7,
+        "baseline_median": 7.0,
+        "risk_class": "normal",
+        "ha_min": 48,
+        "ha_max": 114
+      },
+      {
+        "year": 2027,
+        "month": 11,
+        "predicted_count": 4.0,
+        "baseline_median": 3.0,
+        "risk_class": "normal",
+        "ha_min": 25,
+        "ha_max": 59
+      },
+      {
+        "year": 2027,
+        "month": 12,
+        "predicted_count": 1.7,
+        "baseline_median": 1.0,
+        "risk_class": "high",
+        "ha_min": 11,
+        "ha_max": 25
+      }
+    ],
+    "bejaia": [
+      {
+        "year": 2026,
+        "month": 12,
+        "predicted_count": 1.4,
+        "baseline_median": 1.0,
+        "risk_class": "normal",
+        "ha_min": 9,
+        "ha_max": 21
+      },
+      {
+        "year": 2027,
+        "month": 1,
+        "predicted_count": 1.0,
+        "baseline_median": 1.0,
+        "risk_class": "normal",
+        "ha_min": 6,
+        "ha_max": 15
+      },
+      {
+        "year": 2027,
+        "month": 2,
+        "predicted_count": 0.0,
+        "baseline_median": 0.0,
+        "risk_class": "normal",
+        "ha_min": 0,
+        "ha_max": 0
+      },
+      {
+        "year": 2027,
+        "month": 3,
+        "predicted_count": 3.5,
+        "baseline_median": 3.6,
+        "risk_class": "normal",
+        "ha_min": 22,
+        "ha_max": 52
+      },
+      {
+        "year": 2027,
+        "month": 4,
+        "predicted_count": 2.0,
+        "baseline_median": 2.0,
+        "risk_class": "normal",
+        "ha_min": 12,
+        "ha_max": 30
+      },
+      {
+        "year": 2027,
+        "month": 5,
+        "predicted_count": 2.0,
+        "baseline_median": 2.0,
+        "risk_class": "normal",
+        "ha_min": 12,
+        "ha_max": 30
+      },
+      {
+        "year": 2027,
+        "month": 6,
+        "predicted_count": 4.9,
+        "baseline_median": 5.0,
+        "risk_class": "normal",
+        "ha_min": 30,
+        "ha_max": 73
+      },
+      {
+        "year": 2027,
+        "month": 7,
+        "predicted_count": 104.6,
+        "baseline_median": 108.0,
+        "risk_class": "normal",
+        "ha_min": 649,
+        "ha_max": 1548
+      },
+      {
+        "year": 2027,
+        "month": 8,
+        "predicted_count": 138.6,
+        "baseline_median": 139.7,
+        "risk_class": "normal",
+        "ha_min": 859,
+        "ha_max": 2051
+      },
+      {
+        "year": 2027,
+        "month": 9,
+        "predicted_count": 55.0,
+        "baseline_median": 52.2,
+        "risk_class": "normal",
+        "ha_min": 341,
+        "ha_max": 814
+      },
+      {
+        "year": 2027,
+        "month": 10,
+        "predicted_count": 47.3,
+        "baseline_median": 47.0,
+        "risk_class": "normal",
+        "ha_min": 293,
+        "ha_max": 700
+      },
+      {
+        "year": 2027,
+        "month": 11,
+        "predicted_count": 6.4,
+        "baseline_median": 5.0,
+        "risk_class": "normal",
+        "ha_min": 40,
+        "ha_max": 95
+      },
+      {
+        "year": 2027,
+        "month": 12,
+        "predicted_count": 1.2,
+        "baseline_median": 1.0,
+        "risk_class": "normal",
+        "ha_min": 7,
+        "ha_max": 18
+      }
+    ],
+    "bouira": [
+      {
+        "year": 2026,
+        "month": 12,
+        "predicted_count": 0.3,
+        "baseline_median": 0.0,
+        "risk_class": "high",
+        "ha_min": 2,
+        "ha_max": 4
+      },
+      {
+        "year": 2027,
+        "month": 1,
+        "predicted_count": 0.9,
+        "baseline_median": 1.0,
+        "risk_class": "normal",
+        "ha_min": 6,
+        "ha_max": 13
+      },
+      {
+        "year": 2027,
+        "month": 2,
+        "predicted_count": 0.2,
+        "baseline_median": 0.0,
+        "risk_class": "high",
+        "ha_min": 1,
+        "ha_max": 3
+      },
+      {
+        "year": 2027,
+        "month": 3,
+        "predicted_count": 0.8,
+        "baseline_median": 1.0,
+        "risk_class": "normal",
+        "ha_min": 5,
+        "ha_max": 12
+      },
+      {
+        "year": 2027,
+        "month": 4,
+        "predicted_count": 0.8,
+        "baseline_median": 1.0,
+        "risk_class": "normal",
+        "ha_min": 5,
+        "ha_max": 12
+      },
+      {
+        "year": 2027,
+        "month": 5,
+        "predicted_count": 1.6,
+        "baseline_median": 1.0,
+        "risk_class": "high",
+        "ha_min": 10,
+        "ha_max": 24
+      },
+      {
+        "year": 2027,
+        "month": 6,
+        "predicted_count": 8.4,
+        "baseline_median": 9.5,
+        "risk_class": "normal",
+        "ha_min": 52,
+        "ha_max": 124
+      },
+      {
+        "year": 2027,
+        "month": 7,
+        "predicted_count": 107.5,
+        "baseline_median": 65.0,
+        "risk_class": "high",
+        "ha_min": 666,
+        "ha_max": 1591
+      },
+      {
+        "year": 2027,
+        "month": 8,
+        "predicted_count": 137.2,
+        "baseline_median": 142.2,
+        "risk_class": "normal",
+        "ha_min": 851,
+        "ha_max": 2031
+      },
+      {
+        "year": 2027,
+        "month": 9,
+        "predicted_count": 34.0,
+        "baseline_median": 29.0,
+        "risk_class": "normal",
+        "ha_min": 211,
+        "ha_max": 503
+      },
+      {
+        "year": 2027,
+        "month": 10,
+        "predicted_count": 16.8,
+        "baseline_median": 17.8,
+        "risk_class": "normal",
+        "ha_min": 104,
+        "ha_max": 249
+      },
+      {
+        "year": 2027,
+        "month": 11,
+        "predicted_count": 1.5,
+        "baseline_median": 0.0,
+        "risk_class": "high",
+        "ha_min": 9,
+        "ha_max": 22
+      },
+      {
+        "year": 2027,
+        "month": 12,
+        "predicted_count": 0.2,
+        "baseline_median": 0.0,
+        "risk_class": "high",
+        "ha_min": 1,
+        "ha_max": 3
+      }
+    ],
+    "boumerdes": [
+      {
+        "year": 2026,
+        "month": 12,
+        "predicted_count": 1.0,
+        "baseline_median": 0.0,
+        "risk_class": "high",
+        "ha_min": 6,
+        "ha_max": 15
+      },
+      {
+        "year": 2027,
+        "month": 1,
+        "predicted_count": 0.2,
+        "baseline_median": 0.0,
+        "risk_class": "high",
+        "ha_min": 1,
+        "ha_max": 3
+      },
+      {
+        "year": 2027,
+        "month": 2,
+        "predicted_count": 0.1,
+        "baseline_median": 0.0,
+        "risk_class": "high",
+        "ha_min": 1,
+        "ha_max": 1
+      },
+      {
+        "year": 2027,
+        "month": 3,
+        "predicted_count": 0.0,
+        "baseline_median": 0.0,
+        "risk_class": "normal",
+        "ha_min": 0,
+        "ha_max": 0
+      },
+      {
+        "year": 2027,
+        "month": 4,
+        "predicted_count": 0.0,
+        "baseline_median": 0.0,
+        "risk_class": "normal",
+        "ha_min": 0,
+        "ha_max": 0
+      },
+      {
+        "year": 2027,
+        "month": 5,
+        "predicted_count": 0.8,
+        "baseline_median": 1.0,
+        "risk_class": "normal",
+        "ha_min": 5,
+        "ha_max": 12
+      },
+      {
+        "year": 2027,
+        "month": 6,
+        "predicted_count": 2.8,
+        "baseline_median": 3.4,
+        "risk_class": "normal",
+        "ha_min": 17,
+        "ha_max": 41
+      },
+      {
+        "year": 2027,
+        "month": 7,
+        "predicted_count": 30.1,
+        "baseline_median": 37.3,
+        "risk_class": "normal",
+        "ha_min": 187,
+        "ha_max": 445
+      },
+      {
+        "year": 2027,
+        "month": 8,
+        "predicted_count": 38.8,
+        "baseline_median": 40.7,
+        "risk_class": "normal",
+        "ha_min": 241,
+        "ha_max": 574
+      },
+      {
+        "year": 2027,
+        "month": 9,
+        "predicted_count": 22.1,
+        "baseline_median": 18.0,
+        "risk_class": "normal",
+        "ha_min": 137,
+        "ha_max": 327
+      },
+      {
+        "year": 2027,
+        "month": 10,
+        "predicted_count": 19.3,
+        "baseline_median": 18.8,
+        "risk_class": "normal",
+        "ha_min": 120,
+        "ha_max": 286
+      },
+      {
+        "year": 2027,
+        "month": 11,
+        "predicted_count": 6.3,
+        "baseline_median": 3.0,
+        "risk_class": "high",
+        "ha_min": 39,
+        "ha_max": 93
+      },
+      {
+        "year": 2027,
+        "month": 12,
+        "predicted_count": 1.3,
+        "baseline_median": 0.0,
+        "risk_class": "high",
+        "ha_min": 8,
+        "ha_max": 19
+      }
+    ],
+    "jijel": [
+      {
+        "year": 2026,
+        "month": 12,
+        "predicted_count": 0.0,
+        "baseline_median": 0.0,
+        "risk_class": "normal",
+        "ha_min": 0,
+        "ha_max": 0
+      },
+      {
+        "year": 2027,
+        "month": 1,
+        "predicted_count": 0.0,
+        "baseline_median": 0.0,
+        "risk_class": "normal",
+        "ha_min": 0,
+        "ha_max": 0
+      },
+      {
+        "year": 2027,
+        "month": 2,
+        "predicted_count": 0.0,
+        "baseline_median": 0.0,
+        "risk_class": "normal",
+        "ha_min": 0,
+        "ha_max": 0
+      },
+      {
+        "year": 2027,
+        "month": 3,
+        "predicted_count": 2.0,
+        "baseline_median": 2.0,
+        "risk_class": "normal",
+        "ha_min": 12,
+        "ha_max": 30
+      },
+      {
+        "year": 2027,
+        "month": 4,
+        "predicted_count": 1.0,
+        "baseline_median": 1.0,
+        "risk_class": "normal",
+        "ha_min": 6,
+        "ha_max": 15
+      },
+      {
+        "year": 2027,
+        "month": 5,
+        "predicted_count": 5.0,
+        "baseline_median": 5.0,
+        "risk_class": "normal",
+        "ha_min": 31,
+        "ha_max": 74
+      },
+      {
+        "year": 2027,
+        "month": 6,
+        "predicted_count": 9.0,
+        "baseline_median": 9.0,
+        "risk_class": "normal",
+        "ha_min": 56,
+        "ha_max": 133
+      },
+      {
+        "year": 2027,
+        "month": 7,
+        "predicted_count": 47.7,
+        "baseline_median": 48.0,
+        "risk_class": "normal",
+        "ha_min": 296,
+        "ha_max": 706
+      },
+      {
+        "year": 2027,
+        "month": 8,
+        "predicted_count": 179.9,
+        "baseline_median": 180.7,
+        "risk_class": "normal",
+        "ha_min": 1115,
+        "ha_max": 2663
+      },
+      {
+        "year": 2027,
+        "month": 9,
+        "predicted_count": 54.8,
+        "baseline_median": 54.0,
+        "risk_class": "normal",
+        "ha_min": 340,
+        "ha_max": 811
+      },
+      {
+        "year": 2027,
+        "month": 10,
+        "predicted_count": 41.5,
+        "baseline_median": 41.5,
+        "risk_class": "normal",
+        "ha_min": 257,
+        "ha_max": 614
+      },
+      {
+        "year": 2027,
+        "month": 11,
+        "predicted_count": 3.2,
+        "baseline_median": 3.0,
+        "risk_class": "normal",
+        "ha_min": 20,
+        "ha_max": 47
+      },
+      {
+        "year": 2027,
+        "month": 12,
+        "predicted_count": 0.0,
+        "baseline_median": 0.0,
+        "risk_class": "normal",
+        "ha_min": 0,
+        "ha_max": 0
+      }
+    ],
+    "skikda": [
+      {
+        "year": 2026,
+        "month": 12,
+        "predicted_count": 3.5,
+        "baseline_median": 3.0,
+        "risk_class": "normal",
+        "ha_min": 22,
+        "ha_max": 52
+      },
+      {
+        "year": 2027,
+        "month": 1,
+        "predicted_count": 3.0,
+        "baseline_median": 3.0,
+        "risk_class": "normal",
+        "ha_min": 19,
+        "ha_max": 44
+      },
+      {
+        "year": 2027,
+        "month": 2,
+        "predicted_count": 2.2,
+        "baseline_median": 2.0,
+        "risk_class": "normal",
+        "ha_min": 14,
+        "ha_max": 33
+      },
+      {
+        "year": 2027,
+        "month": 3,
+        "predicted_count": 7.6,
+        "baseline_median": 8.0,
+        "risk_class": "normal",
+        "ha_min": 47,
+        "ha_max": 112
+      },
+      {
+        "year": 2027,
+        "month": 4,
+        "predicted_count": 7.0,
+        "baseline_median": 7.0,
+        "risk_class": "normal",
+        "ha_min": 43,
+        "ha_max": 104
+      },
+      {
+        "year": 2027,
+        "month": 5,
+        "predicted_count": 8.8,
+        "baseline_median": 9.0,
+        "risk_class": "normal",
+        "ha_min": 55,
+        "ha_max": 130
+      },
+      {
+        "year": 2027,
+        "month": 6,
+        "predicted_count": 12.0,
+        "baseline_median": 12.2,
+        "risk_class": "normal",
+        "ha_min": 74,
+        "ha_max": 178
+      },
+      {
+        "year": 2027,
+        "month": 7,
+        "predicted_count": 64.3,
+        "baseline_median": 49.0,
+        "risk_class": "normal",
+        "ha_min": 399,
+        "ha_max": 952
+      },
+      {
+        "year": 2027,
+        "month": 8,
+        "predicted_count": 247.2,
+        "baseline_median": 254.0,
+        "risk_class": "normal",
+        "ha_min": 1533,
+        "ha_max": 3659
+      },
+      {
+        "year": 2027,
+        "month": 9,
+        "predicted_count": 65.4,
+        "baseline_median": 54.0,
+        "risk_class": "normal",
+        "ha_min": 405,
+        "ha_max": 968
+      },
+      {
+        "year": 2027,
+        "month": 10,
+        "predicted_count": 36.5,
+        "baseline_median": 35.0,
+        "risk_class": "normal",
+        "ha_min": 226,
+        "ha_max": 540
+      },
+      {
+        "year": 2027,
+        "month": 11,
+        "predicted_count": 10.7,
+        "baseline_median": 9.0,
+        "risk_class": "normal",
+        "ha_min": 66,
+        "ha_max": 158
+      },
+      {
+        "year": 2027,
+        "month": 12,
+        "predicted_count": 3.5,
+        "baseline_median": 3.0,
+        "risk_class": "normal",
+        "ha_min": 22,
+        "ha_max": 52
+      }
+    ],
+    "tizi_ouzou": [
+      {
+        "year": 2026,
+        "month": 12,
+        "predicted_count": 0.1,
+        "baseline_median": 0.0,
+        "risk_class": "high",
+        "ha_min": 1,
+        "ha_max": 1
+      },
+      {
+        "year": 2027,
+        "month": 1,
+        "predicted_count": 0.0,
+        "baseline_median": 0.0,
+        "risk_class": "normal",
+        "ha_min": 0,
+        "ha_max": 0
+      },
+      {
+        "year": 2027,
+        "month": 2,
+        "predicted_count": 0.0,
+        "baseline_median": 0.0,
+        "risk_class": "normal",
+        "ha_min": 0,
+        "ha_max": 0
+      },
+      {
+        "year": 2027,
+        "month": 3,
+        "predicted_count": 1.0,
+        "baseline_median": 1.0,
+        "risk_class": "normal",
+        "ha_min": 6,
+        "ha_max": 15
+      },
+      {
+        "year": 2027,
+        "month": 4,
+        "predicted_count": 0.0,
+        "baseline_median": 0.0,
+        "risk_class": "normal",
+        "ha_min": 0,
+        "ha_max": 0
+      },
+      {
+        "year": 2027,
+        "month": 5,
+        "predicted_count": 2.0,
+        "baseline_median": 2.0,
+        "risk_class": "normal",
+        "ha_min": 12,
+        "ha_max": 30
+      },
+      {
+        "year": 2027,
+        "month": 6,
+        "predicted_count": 4.0,
+        "baseline_median": 4.0,
+        "risk_class": "normal",
+        "ha_min": 25,
+        "ha_max": 59
+      },
+      {
+        "year": 2027,
+        "month": 7,
+        "predicted_count": 40.7,
+        "baseline_median": 41.0,
+        "risk_class": "normal",
+        "ha_min": 252,
+        "ha_max": 602
+      },
+      {
+        "year": 2027,
+        "month": 8,
+        "predicted_count": 174.4,
+        "baseline_median": 175.5,
+        "risk_class": "normal",
+        "ha_min": 1081,
+        "ha_max": 2581
+      },
+      {
+        "year": 2027,
+        "month": 9,
+        "predicted_count": 53.0,
+        "baseline_median": 52.0,
+        "risk_class": "normal",
+        "ha_min": 329,
+        "ha_max": 784
+      },
+      {
+        "year": 2027,
+        "month": 10,
+        "predicted_count": 34.2,
+        "baseline_median": 34.0,
+        "risk_class": "normal",
+        "ha_min": 212,
+        "ha_max": 506
+      },
+      {
+        "year": 2027,
+        "month": 11,
+        "predicted_count": 3.3,
+        "baseline_median": 3.0,
+        "risk_class": "normal",
+        "ha_min": 20,
+        "ha_max": 49
+      },
+      {
+        "year": 2027,
+        "month": 12,
+        "predicted_count": 0.0,
+        "baseline_median": 0.0,
+        "risk_class": "normal",
+        "ha_min": 0,
+        "ha_max": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "args": {
+    "regions": "C:\\Users\\ayoo\\Desktop\\FIRMSync\\data\\processed\\preset_wilayas.geojson",
+    "overlap_modis": "(2012, 2025)",
+    "overlap_n20": "[2019, 2025]",
+    "min_n": "30",
+    "viirs_drop_low": "False",
+    "modis_min_conf": "None"
+  },
+  "warnings": [
+    "modis_to_snpp: 22 of 56 ratios used a pooled fallback (too few detections)"
+  ],
+  "vegetation_filter": {
+    "rows_in": 1692550,
+    "static_cells": 937,
+    "dropped_by_type": 1268519,
+    "dropped_untyped_in_static_cells": 4454,
+    "kept_without_type": 10867,
+    "rows_out": 419577
+  },
+  "runtime_s": 25.3,
+  "series_spans": {
+    "modis": [
+      "2000-11-01",
+      "2026-11-14"
+    ],
+    "viirs_noaa20": [
+      "2018-04-01",
+      "2026-11-14"
+    ],
+    "viirs_snpp": [
+      "2012-01-20",
+      "2026-11-02"
+    ]
+  },
+  "rows_monthly_regional": 4172,
+  "rows_monthly_harmonized": 2191,
+  "versions": {
+    "pandas": "2.3.3",
+    "geopandas": "1.0.1",
+    "numpy": "1.26.4"
+  }
+}

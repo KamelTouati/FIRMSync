@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="285 160 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fav-flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFB03B"/>
+      <stop offset="0.42" stop-color="#FF7A1F"/>
+      <stop offset="0.75" stop-color="#F2501A"/>
+      <stop offset="1" stop-color="#DC2A1E"/>
+    </linearGradient>
+    <linearGradient id="fav-drop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFD27D"/>
+      <stop offset="1" stop-color="#FFC96B"/>
+    </linearGradient>
+    <linearGradient id="fav-ringFront" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF8A3D"/>
+      <stop offset="1" stop-color="#FF8F45"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background tile for crisp contrast -->
+  <rect x="285" y="160" width="400" height="400" rx="80" fill="#0F1013"/>
+
+  <!-- Emblem -->
+  <g id="emblem">
+    <!-- orbit: back half (behind flame) -->
+    <g transform="translate(485 388) rotate(-21)" fill="none" stroke-linecap="round">
+      <path d="M-187 0 A187 65 0 0 1 187 0" stroke="#7A4526" stroke-width="14"/>
+    </g>
+
+    <!-- flame -->
+    <path fill="url(#fav-flame)" d="M485 203 C500 250 530 270 550 300 C575 335 580 380 575 415 C568 465 530 500 485 500 C440 500 395 465 392 405 C390 370 405 340 432 303 C438 320 445 335 466 350 C462 300 470 240 485 203 Z"/>
+    <!-- inner drop -->
+    <path fill="url(#fav-drop)" d="M485 335 C500 365 533 400 533 445 C533 470 512 487 485 487 C458 487 437 470 437 440 C437 400 470 365 485 335 Z"/>
+
+    <!-- orbit: front half (over flame) -->
+    <g transform="translate(485 388) rotate(-21)" fill="none" stroke-linecap="round">
+      <path d="M-187 0 A187 65 0 0 0 187 0" stroke="url(#fav-ringFront)" stroke-width="14"/>
+      <!-- satellites -->
+      <circle cx="-95" cy="-56" r="14" fill="#FFB03B"/>
+      <rect x="85" y="43" width="26" height="26" rx="6" transform="rotate(21 97 56)" fill="#F7EFE4" stroke="none"/>
+    </g>
+  </g>
+</svg>

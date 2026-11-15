@@ -1,0 +1,1126 @@
+{
+  "modis_to_snpp": [
+    {
+      "region_id": "algiers",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 23.396825396825395,
+      "level": "region",
+      "n_den": 63,
+      "sum_den": 63.0,
+      "sum_ref": 1474.0
+    },
+    {
+      "region_id": "algiers",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 23.396825396825395,
+      "level": "region",
+      "n_den": 63,
+      "sum_den": 63.0,
+      "sum_ref": 1474.0
+    },
+    {
+      "region_id": "algiers",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 23.396825396825395,
+      "level": "region",
+      "n_den": 63,
+      "sum_den": 63.0,
+      "sum_ref": 1474.0
+    },
+    {
+      "region_id": "algiers",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 23.396825396825395,
+      "level": "region",
+      "n_den": 63,
+      "sum_den": 63.0,
+      "sum_ref": 1474.0
+    },
+    {
+      "region_id": "bejaia",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 4.583333333333333,
+      "level": "region_season",
+      "n_den": 36,
+      "sum_den": 36.0,
+      "sum_ref": 165.0
+    },
+    {
+      "region_id": "bejaia",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 3.5845755022683083,
+      "level": "region",
+      "n_den": 3086,
+      "sum_den": 3086.0,
+      "sum_ref": 11062.0
+    },
+    {
+      "region_id": "bejaia",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 3.4930701385972283,
+      "level": "region_season",
+      "n_den": 2381,
+      "sum_den": 2381.0,
+      "sum_ref": 8317.0
+    },
+    {
+      "region_id": "bejaia",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 3.7299382716049383,
+      "level": "region_season",
+      "n_den": 648,
+      "sum_den": 648.0,
+      "sum_ref": 2417.0
+    },
+    {
+      "region_id": "bouira",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 3.2460087082728593,
+      "level": "region",
+      "n_den": 1378,
+      "sum_den": 1378.0,
+      "sum_ref": 4473.0
+    },
+    {
+      "region_id": "bouira",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 3.2460087082728593,
+      "level": "region",
+      "n_den": 1378,
+      "sum_den": 1378.0,
+      "sum_ref": 4473.0
+    },
+    {
+      "region_id": "bouira",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 3.1610017889087656,
+      "level": "region_season",
+      "n_den": 1118,
+      "sum_den": 1118.0,
+      "sum_ref": 3534.0
+    },
+    {
+      "region_id": "bouira",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 3.561946902654867,
+      "level": "region_season",
+      "n_den": 226,
+      "sum_den": 226.0,
+      "sum_ref": 805.0
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 3.3049450549450547,
+      "level": "region",
+      "n_den": 1092,
+      "sum_den": 1092.0,
+      "sum_ref": 3609.0
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 3.3049450549450547,
+      "level": "region",
+      "n_den": 1092,
+      "sum_den": 1092.0,
+      "sum_ref": 3609.0
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 3.3877551020408165,
+      "level": "region_season",
+      "n_den": 637,
+      "sum_den": 637.0,
+      "sum_ref": 2158.0
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 3.13189448441247,
+      "level": "region_season",
+      "n_den": 417,
+      "sum_den": 417.0,
+      "sum_ref": 1306.0
+    },
+    {
+      "region_id": "jijel",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 8.761904761904763,
+      "level": "region_season",
+      "n_den": 42,
+      "sum_den": 42.0,
+      "sum_ref": 368.0
+    },
+    {
+      "region_id": "jijel",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 8.66,
+      "level": "region_season",
+      "n_den": 50,
+      "sum_den": 50.0,
+      "sum_ref": 433.0
+    },
+    {
+      "region_id": "jijel",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 3.68853305785124,
+      "level": "region_season",
+      "n_den": 1936,
+      "sum_den": 1936.0,
+      "sum_ref": 7141.0
+    },
+    {
+      "region_id": "jijel",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 4.145748987854251,
+      "level": "region_season",
+      "n_den": 494,
+      "sum_den": 494.0,
+      "sum_ref": 2048.0
+    },
+    {
+      "region_id": "skikda",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 3.271672107363076,
+      "level": "region",
+      "n_den": 2757,
+      "sum_den": 2757.0,
+      "sum_ref": 9020.0
+    },
+    {
+      "region_id": "skikda",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 6.121621621621622,
+      "level": "region_season",
+      "n_den": 74,
+      "sum_den": 74.0,
+      "sum_ref": 453.0
+    },
+    {
+      "region_id": "skikda",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 3.059860788863109,
+      "level": "region_season",
+      "n_den": 2155,
+      "sum_den": 2155.0,
+      "sum_ref": 6594.0
+    },
+    {
+      "region_id": "skikda",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 3.498,
+      "level": "region_season",
+      "n_den": 500,
+      "sum_den": 500.0,
+      "sum_ref": 1749.0
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 3.8260869565217392,
+      "level": "region_season",
+      "n_den": 46,
+      "sum_den": 46.0,
+      "sum_ref": 176.0
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 3.499315068493151,
+      "level": "region",
+      "n_den": 2920,
+      "sum_den": 2920.0,
+      "sum_ref": 10218.0
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 3.7338935574229692,
+      "level": "region_season",
+      "n_den": 2142,
+      "sum_den": 2142.0,
+      "sum_ref": 7998.0
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 2.6825174825174827,
+      "level": "region_season",
+      "n_den": 715,
+      "sum_den": 715.0,
+      "sum_ref": 1918.0
+    },
+    {
+      "region_id": "algiers",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 3.6478478260869567,
+      "level": "region",
+      "n_den": 63,
+      "sum_den": 920.0,
+      "sum_ref": 3356.02
+    },
+    {
+      "region_id": "algiers",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 3.6478478260869567,
+      "level": "region",
+      "n_den": 63,
+      "sum_den": 920.0,
+      "sum_ref": 3356.02
+    },
+    {
+      "region_id": "algiers",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 3.6478478260869567,
+      "level": "region",
+      "n_den": 63,
+      "sum_den": 920.0,
+      "sum_ref": 3356.02
+    },
+    {
+      "region_id": "algiers",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 3.6478478260869567,
+      "level": "region",
+      "n_den": 63,
+      "sum_den": 920.0,
+      "sum_ref": 3356.02
+    },
+    {
+      "region_id": "bejaia",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 1.2510602073982355,
+      "level": "region_season",
+      "n_den": 36,
+      "sum_den": 646.1,
+      "sum_ref": 808.3100000000001
+    },
+    {
+      "region_id": "bejaia",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 0.8049013226976804,
+      "level": "region",
+      "n_den": 3086,
+      "sum_den": 220942.4,
+      "sum_ref": 177836.83
+    },
+    {
+      "region_id": "bejaia",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 0.7755418724236247,
+      "level": "region_season",
+      "n_den": 2381,
+      "sum_den": 191184.3,
+      "sum_ref": 148271.43
+    },
+    {
+      "region_id": "bejaia",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 0.9735147992822496,
+      "level": "region_season",
+      "n_den": 648,
+      "sum_den": 28923.699999999997,
+      "sum_ref": 28157.65
+    },
+    {
+      "region_id": "bouira",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 0.806563893818804,
+      "level": "region",
+      "n_den": 1378,
+      "sum_den": 94434.8,
+      "sum_ref": 76167.7
+    },
+    {
+      "region_id": "bouira",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 0.806563893818804,
+      "level": "region",
+      "n_den": 1378,
+      "sum_den": 94434.8,
+      "sum_ref": 76167.7
+    },
+    {
+      "region_id": "bouira",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 0.7744293914242191,
+      "level": "region_season",
+      "n_den": 1118,
+      "sum_den": 86324.5,
+      "sum_ref": 66852.23
+    },
+    {
+      "region_id": "bouira",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 1.1524587383390958,
+      "level": "region_season",
+      "n_den": 226,
+      "sum_den": 7664.5,
+      "sum_ref": 8833.02
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 0.6977863454666775,
+      "level": "region",
+      "n_den": 1092,
+      "sum_den": 64142.8,
+      "sum_ref": 44757.97
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 0.6977863454666775,
+      "level": "region",
+      "n_den": 1092,
+      "sum_den": 64142.8,
+      "sum_ref": 44757.97
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 0.5540497829413785,
+      "level": "region_season",
+      "n_den": 637,
+      "sum_den": 48028.5,
+      "sum_ref": 26610.18
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 1.1313817060532008,
+      "level": "region_season",
+      "n_den": 417,
+      "sum_den": 15631.4,
+      "sum_ref": 17685.08
+    },
+    {
+      "region_id": "jijel",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 3.6532542947011857,
+      "level": "region_season",
+      "n_den": 42,
+      "sum_den": 413.3,
+      "sum_ref": 1509.89
+    },
+    {
+      "region_id": "jijel",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 0.6270872567482737,
+      "level": "region_season",
+      "n_den": 50,
+      "sum_den": 2230.2,
+      "sum_ref": 1398.53
+    },
+    {
+      "region_id": "jijel",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 0.7962390223890621,
+      "level": "region_season",
+      "n_den": 1936,
+      "sum_den": 110178.79999999999,
+      "sum_ref": 87728.65999999999
+    },
+    {
+      "region_id": "jijel",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 0.8516889996883763,
+      "level": "region_season",
+      "n_den": 494,
+      "sum_den": 19254.0,
+      "sum_ref": 16398.42
+    },
+    {
+      "region_id": "skikda",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 0.7956513225127139,
+      "level": "region",
+      "n_den": 2757,
+      "sum_den": 224183.1,
+      "sum_ref": 178371.58
+    },
+    {
+      "region_id": "skikda",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 1.6605865845931023,
+      "level": "region_season",
+      "n_den": 74,
+      "sum_den": 1104.7,
+      "sum_ref": 1834.45
+    },
+    {
+      "region_id": "skikda",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 0.7822844699190558,
+      "level": "region_season",
+      "n_den": 2155,
+      "sum_den": 201089.1,
+      "sum_ref": 157308.88
+    },
+    {
+      "region_id": "skikda",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 0.8619469109088196,
+      "level": "region_season",
+      "n_den": 500,
+      "sum_den": 21443.2,
+      "sum_ref": 18482.9
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 1.2972370559554216,
+      "level": "region_season",
+      "n_den": 46,
+      "sum_den": 861.4,
+      "sum_ref": 1117.44
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 0.7971461447060617,
+      "level": "region",
+      "n_den": 2920,
+      "sum_den": 223613.30000000002,
+      "sum_ref": 178252.48
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 0.8172370074565232,
+      "level": "region_season",
+      "n_den": 2142,
+      "sum_den": 188036.69999999998,
+      "sum_ref": 153670.55
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 0.6671689664572783,
+      "level": "region_season",
+      "n_den": 715,
+      "sum_den": 34481.4,
+      "sum_ref": 23004.92
+    }
+  ],
+  "noaa20_to_snpp": [
+    {
+      "region_id": "algiers",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 0.8717948717948718,
+      "level": "region_season",
+      "n_den": 117,
+      "sum_den": 117.0,
+      "sum_ref": 102.0
+    },
+    {
+      "region_id": "algiers",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 0.8048780487804879,
+      "level": "region_season",
+      "n_den": 246,
+      "sum_den": 246.0,
+      "sum_ref": 198.0
+    },
+    {
+      "region_id": "algiers",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 0.9844236760124611,
+      "level": "region_season",
+      "n_den": 321,
+      "sum_den": 321.0,
+      "sum_ref": 316.0
+    },
+    {
+      "region_id": "algiers",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 1.215311004784689,
+      "level": "region_season",
+      "n_den": 209,
+      "sum_den": 209.0,
+      "sum_ref": 254.0
+    },
+    {
+      "region_id": "bejaia",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 0.9312977099236641,
+      "level": "region_season",
+      "n_den": 131,
+      "sum_den": 131.0,
+      "sum_ref": 122.0
+    },
+    {
+      "region_id": "bejaia",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 1.1408450704225352,
+      "level": "region_season",
+      "n_den": 71,
+      "sum_den": 71.0,
+      "sum_ref": 81.0
+    },
+    {
+      "region_id": "bejaia",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 0.8863933711295247,
+      "level": "region_season",
+      "n_den": 4586,
+      "sum_den": 4586.0,
+      "sum_ref": 4065.0
+    },
+    {
+      "region_id": "bejaia",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 1.2565022421524663,
+      "level": "region_season",
+      "n_den": 1115,
+      "sum_den": 1115.0,
+      "sum_ref": 1401.0
+    },
+    {
+      "region_id": "bouira",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 1.0,
+      "level": "region_season",
+      "n_den": 39,
+      "sum_den": 39.0,
+      "sum_ref": 39.0
+    },
+    {
+      "region_id": "bouira",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 1.1428571428571428,
+      "level": "region_season",
+      "n_den": 35,
+      "sum_den": 35.0,
+      "sum_ref": 40.0
+    },
+    {
+      "region_id": "bouira",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 0.8239678899082569,
+      "level": "region_season",
+      "n_den": 1744,
+      "sum_den": 1744.0,
+      "sum_ref": 1437.0
+    },
+    {
+      "region_id": "bouira",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 0.9802371541501976,
+      "level": "region_season",
+      "n_den": 253,
+      "sum_den": 253.0,
+      "sum_ref": 248.0
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 0.78125,
+      "level": "region_season",
+      "n_den": 64,
+      "sum_den": 64.0,
+      "sum_ref": 50.0
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 0.676056338028169,
+      "level": "region_season",
+      "n_den": 71,
+      "sum_den": 71.0,
+      "sum_ref": 48.0
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 0.9497964721845319,
+      "level": "region_season",
+      "n_den": 737,
+      "sum_den": 737.0,
+      "sum_ref": 700.0
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 1.0242424242424242,
+      "level": "region_season",
+      "n_den": 330,
+      "sum_den": 330.0,
+      "sum_ref": 338.0
+    },
+    {
+      "region_id": "jijel",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 1.3709677419354838,
+      "level": "region_season",
+      "n_den": 248,
+      "sum_den": 248.0,
+      "sum_ref": 340.0
+    },
+    {
+      "region_id": "jijel",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 1.2878228782287824,
+      "level": "region_season",
+      "n_den": 271,
+      "sum_den": 271.0,
+      "sum_ref": 349.0
+    },
+    {
+      "region_id": "jijel",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 0.9979009235936188,
+      "level": "region_season",
+      "n_den": 2382,
+      "sum_den": 2382.0,
+      "sum_ref": 2377.0
+    },
+    {
+      "region_id": "jijel",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 0.9493791786055397,
+      "level": "region_season",
+      "n_den": 1047,
+      "sum_den": 1047.0,
+      "sum_ref": 994.0
+    },
+    {
+      "region_id": "skikda",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 1.2920353982300885,
+      "level": "region_season",
+      "n_den": 113,
+      "sum_den": 113.0,
+      "sum_ref": 146.0
+    },
+    {
+      "region_id": "skikda",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 1.25,
+      "level": "region_season",
+      "n_den": 156,
+      "sum_den": 156.0,
+      "sum_ref": 195.0
+    },
+    {
+      "region_id": "skikda",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 1.0379241516966067,
+      "level": "region_season",
+      "n_den": 2004,
+      "sum_den": 2004.0,
+      "sum_ref": 2080.0
+    },
+    {
+      "region_id": "skikda",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 0.9693053311793215,
+      "level": "region_season",
+      "n_den": 619,
+      "sum_den": 619.0,
+      "sum_ref": 600.0
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "DJF",
+      "metric": "count",
+      "ratio": 0.934640522875817,
+      "level": "region_season",
+      "n_den": 153,
+      "sum_den": 153.0,
+      "sum_ref": 143.0
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "MAM",
+      "metric": "count",
+      "ratio": 1.0175438596491229,
+      "level": "region_season",
+      "n_den": 57,
+      "sum_den": 57.0,
+      "sum_ref": 58.0
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "JJA",
+      "metric": "count",
+      "ratio": 1.4162739553879988,
+      "level": "region_season",
+      "n_den": 3183,
+      "sum_den": 3183.0,
+      "sum_ref": 4508.0
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "SON",
+      "metric": "count",
+      "ratio": 0.8935064935064935,
+      "level": "region_season",
+      "n_den": 770,
+      "sum_den": 770.0,
+      "sum_ref": 688.0
+    },
+    {
+      "region_id": "algiers",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 0.8116819571865443,
+      "level": "region_season",
+      "n_den": 117,
+      "sum_den": 163.5,
+      "sum_ref": 132.71
+    },
+    {
+      "region_id": "algiers",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 0.7010182497909391,
+      "level": "region_season",
+      "n_den": 246,
+      "sum_den": 406.58,
+      "sum_ref": 285.02
+    },
+    {
+      "region_id": "algiers",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 1.149297246079277,
+      "level": "region_season",
+      "n_den": 321,
+      "sum_den": 823.19,
+      "sum_ref": 946.09
+    },
+    {
+      "region_id": "algiers",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 1.1104847801578355,
+      "level": "region_season",
+      "n_den": 209,
+      "sum_den": 390.28000000000003,
+      "sum_ref": 433.40000000000003
+    },
+    {
+      "region_id": "bejaia",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 0.746341818534786,
+      "level": "region_season",
+      "n_den": 131,
+      "sum_den": 824.1800000000001,
+      "sum_ref": 615.12
+    },
+    {
+      "region_id": "bejaia",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 1.221851697466537,
+      "level": "region_season",
+      "n_den": 71,
+      "sum_den": 215.91,
+      "sum_ref": 263.81
+    },
+    {
+      "region_id": "bejaia",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 0.9544549047999565,
+      "level": "region_season",
+      "n_den": 4586,
+      "sum_den": 93343.97,
+      "sum_ref": 89092.61
+    },
+    {
+      "region_id": "bejaia",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 1.3466283910646266,
+      "level": "region_season",
+      "n_den": 1115,
+      "sum_den": 12425.67,
+      "sum_ref": 16732.76
+    },
+    {
+      "region_id": "bouira",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 0.8823529411764706,
+      "level": "region_season",
+      "n_den": 39,
+      "sum_den": 141.61,
+      "sum_ref": 124.95
+    },
+    {
+      "region_id": "bouira",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 0.5663494957552276,
+      "level": "region_season",
+      "n_den": 35,
+      "sum_den": 175.51,
+      "sum_ref": 99.4
+    },
+    {
+      "region_id": "bouira",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 0.7660235070059829,
+      "level": "region_season",
+      "n_den": 1744,
+      "sum_den": 44862.37,
+      "sum_ref": 34365.63
+    },
+    {
+      "region_id": "bouira",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 2.0408481080021286,
+      "level": "region_season",
+      "n_den": 253,
+      "sum_den": 1785.1499999999999,
+      "sum_ref": 3643.22
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 0.7554638848121852,
+      "level": "region_season",
+      "n_den": 64,
+      "sum_den": 252.11,
+      "sum_ref": 190.46
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 0.9501842824872191,
+      "level": "region_season",
+      "n_den": 71,
+      "sum_den": 168.22,
+      "sum_ref": 159.84
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 1.177307962529274,
+      "level": "region_season",
+      "n_den": 737,
+      "sum_den": 8540.0,
+      "sum_ref": 10054.21
+    },
+    {
+      "region_id": "boumerdes",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 1.2441680396346257,
+      "level": "region_season",
+      "n_den": 330,
+      "sum_den": 3435.3799999999997,
+      "sum_ref": 4274.1900000000005
+    },
+    {
+      "region_id": "jijel",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 1.2771914181209398,
+      "level": "region_season",
+      "n_den": 248,
+      "sum_den": 1099.06,
+      "sum_ref": 1403.71
+    },
+    {
+      "region_id": "jijel",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 1.4138769949396655,
+      "level": "region_season",
+      "n_den": 271,
+      "sum_den": 719.3199999999999,
+      "sum_ref": 1017.0300000000001
+    },
+    {
+      "region_id": "jijel",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 0.9934776592440371,
+      "level": "region_season",
+      "n_den": 2382,
+      "sum_den": 27172.76,
+      "sum_ref": 26995.53
+    },
+    {
+      "region_id": "jijel",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 0.8098440562228698,
+      "level": "region_season",
+      "n_den": 1047,
+      "sum_den": 8903.85,
+      "sum_ref": 7210.73
+    },
+    {
+      "region_id": "skikda",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 0.9514908014379362,
+      "level": "region_season",
+      "n_den": 113,
+      "sum_den": 472.9,
+      "sum_ref": 449.96
+    },
+    {
+      "region_id": "skikda",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 1.1608165044312073,
+      "level": "region_season",
+      "n_den": 156,
+      "sum_den": 688.3,
+      "sum_ref": 798.99
+    },
+    {
+      "region_id": "skikda",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 0.9936819206023809,
+      "level": "region_season",
+      "n_den": 2004,
+      "sum_den": 54609.950000000004,
+      "sum_ref": 54264.92
+    },
+    {
+      "region_id": "skikda",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 0.8304711901216878,
+      "level": "region_season",
+      "n_den": 619,
+      "sum_den": 5359.62,
+      "sum_ref": 4451.01
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "DJF",
+      "metric": "frp",
+      "ratio": 1.012913046901656,
+      "level": "region_season",
+      "n_den": 153,
+      "sum_den": 762.02,
+      "sum_ref": 771.86
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "MAM",
+      "metric": "frp",
+      "ratio": 1.148144013396595,
+      "level": "region_season",
+      "n_den": 57,
+      "sum_den": 179.15,
+      "sum_ref": 205.69
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "JJA",
+      "metric": "frp",
+      "ratio": 1.5063654315931132,
+      "level": "region_season",
+      "n_den": 3183,
+      "sum_den": 68363.0,
+      "sum_ref": 102979.66
+    },
+    {
+      "region_id": "tizi_ouzou",
+      "season": "SON",
+      "metric": "frp",
+      "ratio": 0.8975075576601907,
+      "level": "region_season",
+      "n_den": 770,
+      "sum_den": 7095.45,
+      "sum_ref": 6368.22
+    }
+  ]
+}
